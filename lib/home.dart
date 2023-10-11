@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
             //   borderRadius: BorderRadius.circular(30), // <-- Radius
             // ),
             ),
-            child: const Text("Calculate",style: TextStyle(color: Colors.white),),
+            child: const Text("Calculate",style: TextStyle(color: Colors.white,fontSize: 20),),
             ),
           const SizedBox(height: 100,),
            Text("Result : ${bmi.toStringAsFixed(2)} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
