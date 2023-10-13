@@ -48,119 +48,123 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
-                  width: 180,
-                  height: 280,
-                  decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.25),
-                  borderRadius: BorderRadius.circular(20)
-                  ),
-                  child:  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Weight",style: TextStyle(color:Colors.grey[600],fontSize: 25,fontWeight: FontWeight.bold),),
-                       const SizedBox(height: 15,),
-                        Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("${weight.toInt()} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
-                            const Text("KG ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                          ],
-                        ),
-                      const  SizedBox(height: 25,),
-                        Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                          FloatingActionButton(
-                            mini: true,
-                            backgroundColor: const Color(0xff4C4F5E),
-                            onPressed: (){
-                              setState(() {
-                                weight--;
-                              });
-                            },
-                            child:const Icon(Icons.remove),
-                            ),
-                           const SizedBox(width:10),
-                            FloatingActionButton(
-                            mini: true,
-                              backgroundColor: const Color(0xff4C4F5E),
-                            onPressed: (){
-                              setState(() {
-                                weight++;
-                              });
-                            },
-                             child:const Icon(Icons.add) ,
-          
-                            ),
-                          ],
-                        ),
-          
-                      ]
-                      ),
-                  ),
-              ),
+          Expanded(
+            child: Row(
+              children: [
                 Expanded(
                   child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
-                    width: 180,
-                    height: 280,
-                    decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.25),
-                    borderRadius: BorderRadius.circular(20)
-                    ),
-                    child:  Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Height",style: TextStyle(color:Colors.grey[600],fontSize: 25,fontWeight: FontWeight.bold),),
-                         const SizedBox(height: 15,),
-                          Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("${height.toInt()} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
-                              const Text("CM ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                            ],
-                          ),
-                        const  SizedBox(height: 25,),
-                          Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                            FloatingActionButton(
-                            mini: true,
-                              backgroundColor: const Color(0xff4C4F5E),
-                              onPressed: (){
-                                setState(() {
-                                height--;
-                              });
-                              },
-                              child:const Icon(Icons.remove),
-                              ),
-                             const SizedBox(width:10),
+                      margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+                      
+                      height: 280,
+                      decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.25),
+                      borderRadius: BorderRadius.circular(20)
+                      ),
+                      child:  Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Weight",style: TextStyle(color:Colors.grey[600],fontSize: 25,fontWeight: FontWeight.bold),),
+                           const SizedBox(height: 15,),
+                            Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("${weight.toInt()} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+                                const Text("KG ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          const  SizedBox(height: 25,),
+                            Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
                               FloatingActionButton(
-                            mini: true,
+                                mini: true,
                                 backgroundColor: const Color(0xff4C4F5E),
-                              onPressed: (){
-                                setState(() {
-                                height++;
-                              });
-                              },
-                               child:const Icon(Icons.add) ,
+                                onPressed: (){
+                                  setState(() {
+                                    weight--;
+                                  });
+                                },
+                                child:const Icon(Icons.remove),
+                                ),
+                               const SizedBox(width:10),
+                                FloatingActionButton(
+                                mini: true,
+                                  backgroundColor: const Color(0xff4C4F5E),
+                                onPressed: (){
+                                  setState(() {
+                                    weight++;
+                                  });
+                                },
+                                 child:const Icon(Icons.add) ,
                           
-                              ),
-                            ],
+                                ),
+                              ],
+                            ),
+                          
+                          ]
                           ),
-                          
-                        ]
-                        ),
-                    ),
-                              ),
+                      ),
+                  ),
                 ),
-            ],
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+                     
+                      height: 280,
+                      decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.25),
+                      borderRadius: BorderRadius.circular(20)
+                      ),
+                      child:  Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Height",style: TextStyle(color:Colors.grey[600],fontSize: 25,fontWeight: FontWeight.bold),),
+                           const SizedBox(height: 15,),
+                            Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("${height.toInt()} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+                                const Text("CM ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          const  SizedBox(height: 25,),
+                            Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                              FloatingActionButton(
+                              mini: true,
+                                backgroundColor: const Color(0xff4C4F5E),
+                                onPressed: (){
+                                  setState(() {
+                                  height--;
+                                });
+                                },
+                                child:const Icon(Icons.remove),
+                                ),
+                               const SizedBox(width:10),
+                                FloatingActionButton(
+                              mini: true,
+                                  backgroundColor: const Color(0xff4C4F5E),
+                                onPressed: (){
+                                  setState(() {
+                                  height++;
+                                });
+                                },
+                                 child:const Icon(Icons.add) ,
+                            
+                                ),
+                              ],
+                            ),
+                            
+                          ]
+                          ),
+                      ),
+                                ),
+                  ),
+              ],
+            ),
           ),
           const SizedBox(height: 15,),
           ElevatedButton(
@@ -176,12 +180,19 @@ class _HomePageState extends State<HomePage> {
             //   borderRadius: BorderRadius.circular(30), // <-- Radius
             // ),
             ),
-            child: const Text("Calculate",style: TextStyle(color: Colors.white,fontSize: 20),),
+            child: const Text("Calculate",style: TextStyle(color: Colors.white,fontSize: 18),),
             ),
-          const SizedBox(height: 100,),
+            Expanded(
+              child:Column(
+              children: [
+                  const SizedBox(height: 100,),
            Text("Result : ${bmi.toStringAsFixed(2)} ",style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
           const SizedBox(height: 30,),
            Text(type,style: const TextStyle(color: Colors.green,fontSize: 30,),),
+              ],
+            )
+             ),
+          
         ],
       ) ,
     );
